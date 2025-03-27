@@ -14,7 +14,7 @@ const AboutUs = () => {
           className="bg-blue-600 text-white px-6 py-3 rounded-md"
           onClick={() => navigate("/about")}
         >
-          Learn More
+          Know More
         </button>
       </div>
     </section>

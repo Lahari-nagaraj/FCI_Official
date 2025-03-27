@@ -1,11 +1,78 @@
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white text-center py-6">
-      <p>Office Address: XYZ Street, City, India</p>
-      <p>Contact: +91 98765 43210</p>
-      <div className="flex justify-center space-x-4 mt-2">
-        <img src="/facebook.svg" alt="Facebook" className="h-6" />
-        <img src="/twitter.svg" alt="Twitter" className="h-6" />
+    <footer className="bg-gray-800 text-white py-8 px-12">
+      <div className="container mx-auto grid grid-cols-3 gap-8 items-center text-center md:text-left">
+        {/* Office Address - Left */}
+        <div>
+          <h2 className="text-lg font-semibold tracking-wide">
+            Office Address
+          </h2>
+          <p className="text-gray-300 mt-2">
+            #21, 3rd Cross, Ashraya Layout, Stage 1, <br />
+            Mahadevpura, Bangalore 560 048
+          </p>
+        </div>
+
+        {/* Contact Info - Center */}
+        <div className="text-center">
+          <h2 className="text-lg font-semibold tracking-wide">Get in Touch</h2>
+          <p className="text-gray-300 mt-2">
+            Phone:{" "}
+            <a href="tel:+919845277768" className="hover:underline">
+              +91 98452 77768
+            </a>{" "}
+            <br />
+            Landline:{" "}
+            <a href="tel:+918035839490" className="hover:underline">
+              +91 80 3583 9490
+            </a>{" "}
+            <br />
+            Email:{" "}
+            <a
+              href="mailto:fundachildinindia@gmail.com"
+              className="hover:underline"
+            >
+              fundachildinindia@gmail.com
+            </a>
+          </p>
+        </div>
+
+        {/* Social Media - Right */}
+        <div className="text-right">
+          <h2 className="text-lg font-semibold tracking-wide">Follow Us</h2>
+          <div className="flex justify-end space-x-4 mt-3">
+            <a
+              href="https://facebook.com/yourpage"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF className="text-white text-2xl hover:text-gray-400 transition" />
+            </a>
+            <a
+              href="https://twitter.com/yourpage"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter className="text-white text-2xl hover:text-gray-400 transition" />
+            </a>
+            <a
+              href="https://www.instagram.com/fundachildinindia/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="text-white text-2xl hover:text-gray-400 transition" />
+            </a>
+            <a
+              href="https://www.youtube.com/@fundachildinindia5030"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube className="text-white text-2xl hover:text-gray-400 transition" />
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
