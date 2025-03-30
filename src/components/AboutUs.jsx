@@ -86,7 +86,7 @@ const AboutUs = () => {
       {/* Know More Button */}
       <div className="flex justify-center mt-12">
         <button
-          className="bg-blue-900 hover:bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-md transition transform hover:scale-105"
+          className="bg-blue-900 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-md transition transform hover:scale-105"
           onClick={() => navigate("/about")}
         >
           Know More

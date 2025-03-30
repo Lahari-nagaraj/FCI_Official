@@ -7,10 +7,9 @@ const Donate = () => {
         <p className="text-gray-700 mt-4 text-lg max-w-4xl mx-auto">
           Fund a Child in India, as an education initiative, runs various
           programs in academics, talent development, and child development. Your
-          donation helps provide soft skills, technical skills, mentorship,
-          and training programs for students in primary, secondary, and
-          higher education. Your contribution will make a real impact in
-          their lives.
+          donation helps provide soft skills, technical skills, mentorship, and
+          training programs for students in primary, secondary, and higher
+          education. Your contribution will make a real impact in their lives.
         </p>
       </div>
 
@@ -85,7 +84,7 @@ const Donate = () => {
             Your support can change a child's future. Help us empower young
             minds and create a better tomorrow.
           </p>
-          <button className="mt-6 bg-blue-900 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-md transition transform hover:scale-105 hover:bg-blue-800">
+          <button className="mt-6 bg-blue-900 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-md transition transform hover:scale-105 ">
             Donate Now
           </button>
         </div>
