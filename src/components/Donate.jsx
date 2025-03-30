@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const Donate = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="donate" className="py-16 px-6 bg-blue-50">
       {/* Full Width Section */}
@@ -84,7 +88,10 @@ const Donate = () => {
             Your support can change a child's future. Help us empower young
             minds and create a better tomorrow.
           </p>
-          <button className="mt-6 bg-blue-900 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-md transition transform hover:scale-105 ">
+          <button
+            onClick={() => navigate("/donation")}
+            className="mt-6 bg-blue-900 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-md transition transform hover:scale-105 "
+          >
             Donate Now
           </button>
         </div>
