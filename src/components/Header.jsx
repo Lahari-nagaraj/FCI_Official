@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="bg-gray-100 shadow-md py-2 px-8 flex justify-between items-center">
+    <header className="bg-gray-800 shadow-md py-1.5 px-8 flex justify-between items-center">
       {/* Logo and Brand Name */}
       <div className="flex items-center space-x-4">
         <img
@@ -10,7 +10,7 @@ const Header = () => {
           alt="FCI Logo"
           className="w-16 h-16 object-contain"
         />
-        <h1 className="text-2xl font-extrabold text-blue-900 tracking-wide">
+        <h1 className="text-2xl font-extrabold text-white tracking-wide">
           FCI
         </h1>
       </div>
@@ -18,11 +18,10 @@ const Header = () => {
       {/* Navigation */}
       <nav>
         <ul className="flex space-x-8 text-lg font-medium">
-          
           <li>
             <a
               href="#about"
-              className="text-blue-900 hover:text-blue-600 transition"
+              className="text-white hover:text-gray-400 transition"
             >
               About Us
             </a>
@@ -30,7 +29,7 @@ const Header = () => {
           <li>
             <a
               href="#donate"
-              className="text-blue-900 hover:text-blue-600 transition"
+              className="text-white hover:text-gray-400 transition"
             >
               Donate
             </a>
@@ -38,12 +37,11 @@ const Header = () => {
           <li>
             <a
               href="#contact"
-              className="text-blue-900 hover:text-blue-600 transition"
+              className="text-white hover:text-gray-400 transition"
             >
               Contact
             </a>
           </li>
-          <li></li>
         </ul>
       </nav>
     </header>
