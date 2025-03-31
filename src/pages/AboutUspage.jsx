@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header"; // Ensure correct path for your Header component
+import Footer from "../components/Footer"; // Ensure correct path for your Footer component
 
 const AboutUsPage = () => {
   const navigate = useNavigate();
@@ -50,112 +52,126 @@ const AboutUsPage = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-gray-200 min-h-screen px-6 py-12">
-      <h2 className="text-4xl font-bold text-center mb-10 text-blue-900">
-        More About Us
-      </h2>
+    <div>
+      {/* Header */}
+      <Header />
 
-      {/* Programs Section */}
-      <section className="max-w-6xl mx-auto">
-        <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">
-          Programs
-        </h3>
-        <div className="grid md:grid-cols-3 gap-8">
-          {programs.map((program) => (
-            <div
-              key={program.id}
-              onClick={() => navigate(`/programs/${program.id}`)}
-              className="bg-white border border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-lg overflow-hidden transform hover:-translate-y-2 cursor-pointer"
-            >
-              <img
-                src={program.image}
-                alt={program.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6 text-center">
-                <h4 className="text-xl font-semibold text-blue-900">
-                  {program.title}
-                </h4>
-                <p className="text-gray-700 text-sm mt-2">
-                  {program.description}
-                </p>
+      <div className="bg-gradient-to-b from-gray-50 to-gray-200 min-h-screen px-6 py-12">
+        <h2 className="text-4xl font-bold text-center mb-10 text-blue-900">
+          More About Us
+        </h2>
+
+        {/* Programs Section */}
+        <section className="max-w-6xl mx-auto">
+          <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">
+            Programs
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {programs.map((program) => (
+              <div
+                key={program.id}
+                onClick={() => navigate(`/programs/${program.id}`)}
+                className="bg-white border border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-lg overflow-hidden transform hover:-translate-y-2 cursor-pointer"
+              >
+                <img
+                  src={program.image}
+                  alt={program.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6 text-center">
+                  <h4 className="text-xl font-semibold text-blue-900">
+                    {program.title}
+                  </h4>
+                  <p className="text-gray-700 text-sm mt-2">
+                    {program.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      {/* Journey Timeline - Two years side by side */}
-      <section className="max-w-6xl mx-auto mt-12 bg-white shadow-lg rounded-lg border border-gray-300 p-8">
-        <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-          Our Journey
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {milestones.map((milestone, index) => (
-            <div
-              key={index}
-              className="flex items-center space-x-4 bg-gray-100 p-4 rounded-lg shadow"
-            >
-              <div className="text-3xl">{milestone.title.split(" ")[0]}</div>
-              <div>
-                <span className="block text-lg font-semibold text-blue-900">
-                  {milestone.year}
+        {/* Journey Timeline */}
+        <section className="max-w-6xl mx-auto mt-12 bg-white shadow-lg rounded-lg border border-gray-300 p-8">
+          <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            Our Journey
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {milestones.map((milestone, index) => (
+              <div
+                key={index}
+                className="flex items-center space-x-4 bg-gray-100 p-4 rounded-lg shadow"
+              >
+                <div className="text-3xl">{milestone.title.split(" ")[0]}</div>
+                <div>
+                  <span className="block text-lg font-semibold text-blue-900">
+                    {milestone.year}
+                  </span>
+                  <p className="text-gray-700 text-sm">
+                    {milestone.title.slice(2)}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Impact Section */}
+        <section className="w-full max-w-5xl mx-auto mt-12 bg-white shadow-lg rounded-lg border border-gray-300 p-10">
+          <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            Our Impact
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {impactStats.map((stat, index) => (
+              <div
+                key={index}
+                className="p-6 bg-white border border-gray-300 shadow-lg rounded-lg transform hover:scale-105 transition-all duration-300"
+              >
+                <span className="block text-5xl">{stat.emoji}</span>
+                <span className="block text-3xl font-bold text-blue-900 mt-2">
+                  {stat.number}
                 </span>
-                <p className="text-gray-700 text-sm">
-                  {milestone.title.slice(2)}
-                </p>
+                <p className="text-gray-700 text-sm mt-2">{stat.text}</p>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Impact Section - Centered & Wide */}
-      <section className="w-full max-w-5xl mx-auto mt-12 bg-white shadow-lg rounded-lg border border-gray-300 p-10">
-        <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-          Our Impact
-        </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {impactStats.map((stat, index) => (
-            <div
-              key={index}
-              className="p-6 bg-white border border-gray-300 shadow-lg rounded-lg transform hover:scale-105 transition-all duration-300"
-            >
-              <span className="block text-5xl">{stat.emoji}</span>
-              <span className="block text-3xl font-bold text-blue-900 mt-2">
-                {stat.number}
-              </span>
-              <p className="text-gray-700 text-sm mt-2">{stat.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="max-w-6xl mx-auto mt-12 text-center">
-        <h3 className="text-3xl font-bold text-gray-800 mb-6">Our Partners</h3>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-          {/* Training Partner */}
-          <div className="bg-white shadow-lg p-6 rounded-lg border border-gray-300 w-64 flex flex-col items-center hover:shadow-xl transition-all duration-300">
-            <img
-              src="/training-partner-logo.png"
-              alt="Training Partner"
-              className="h-20 object-contain mb-4"
-            />
-            <p className="text-blue-900 font-bold text-lg">Training Partner</p>
+            ))}
           </div>
+        </section>
 
-          {/* Corporate Partner */}
-          <div className="bg-white shadow-lg p-6 rounded-lg border border-gray-300 w-64 flex flex-col items-center hover:shadow-xl transition-all duration-300">
-            <img
-              src="/corporate-partner-logo.png"
-              alt="Corporate Partner"
-              className="h-20 object-contain mb-4"
-            />
-            <p className="text-blue-900 font-bold text-lg">Corporate Partner</p>
+        {/* Partners Section */}
+        <section className="max-w-6xl mx-auto mt-12 text-center">
+          <h3 className="text-3xl font-bold text-gray-800 mb-6">
+            Our Partners
+          </h3>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+            {/* Training Partner */}
+            <div className="bg-white shadow-lg p-6 rounded-lg border border-gray-300 w-64 flex flex-col items-center hover:shadow-xl transition-all duration-300">
+              <img
+                src="/training-partner-logo.png"
+                alt="Training Partner"
+                className="h-20 object-contain mb-4"
+              />
+              <p className="text-blue-900 font-bold text-lg">
+                Training Partner
+              </p>
+            </div>
+
+            {/* Corporate Partner */}
+            <div className="bg-white shadow-lg p-6 rounded-lg border border-gray-300 w-64 flex flex-col items-center hover:shadow-xl transition-all duration-300">
+              <img
+                src="/corporate-partner-logo.png"
+                alt="Corporate Partner"
+                className="h-20 object-contain mb-4"
+              />
+              <p className="text-blue-900 font-bold text-lg">
+                Corporate Partner
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

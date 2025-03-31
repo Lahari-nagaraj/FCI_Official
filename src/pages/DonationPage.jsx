@@ -26,16 +26,32 @@ const DonationPage = () => {
         </div>
 
         <div className="mt-6 space-x-4 flex justify-center">
-          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.facebook.com/groups/325405297611892/user/100004226688582"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaFacebook className="text-blue-600 text-2xl hover:text-blue-800" />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/fundachildinindia"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaInstagram className="text-pink-500 text-2xl hover:text-pink-700" />
           </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/groups/10483541"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin className="text-blue-800 text-2xl hover:text-blue-900" />
           </a>
-          <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.youtube.com/@fundachildinindia5030"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaYoutube className="text-red-600 text-2xl hover:text-red-800" />
           </a>
         </div>
