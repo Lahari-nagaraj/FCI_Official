@@ -49,14 +49,14 @@ const Footer = () => {
           <h2 className="text-lg font-semibold tracking-wide">Follow Us</h2>
           <div className="flex justify-end space-x-4 mt-3">
             <a
-              href="https://facebook.com/yourpage"
+              href="https://www.facebook.com/groups/325405297611892/user/100004226688582"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebookF className="text-white text-2xl hover:text-gray-400 transition" />
             </a>
             <a
-              href="https://www.linkedin.com/company/yourpage"
+              href="https://www.linkedin.com/groups/10483541"
               target="_blank"
               rel="noopener noreferrer"
             >
