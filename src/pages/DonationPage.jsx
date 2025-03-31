@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const DonationPage = () => {
   const navigate = useNavigate();
@@ -29,14 +29,14 @@ const DonationPage = () => {
           <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
             <FaFacebook className="text-blue-600 text-2xl hover:text-blue-800" />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
-            <FaTwitter className="text-blue-400 text-2xl hover:text-blue-600" />
-          </a>
           <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
             <FaInstagram className="text-pink-500 text-2xl hover:text-pink-700" />
           </a>
           <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
             <FaLinkedin className="text-blue-800 text-2xl hover:text-blue-900" />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+            <FaYoutube className="text-red-600 text-2xl hover:text-red-800" />
           </a>
         </div>
 

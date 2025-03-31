@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 const AboutUsPage = () => {
   const navigate = useNavigate();
 
+  // Programs Section
   const programs = [
     {
       id: "education",
@@ -27,6 +28,7 @@ const AboutUsPage = () => {
     },
   ];
 
+  // Journey Timeline
   const milestones = [
     { year: 2014, title: "🎨 Drawing Competition for Slum Children" },
     { year: 2015, title: "📚 Educational Assistance Launched" },
@@ -39,6 +41,7 @@ const AboutUsPage = () => {
     { year: 2025, title: "🎯 Target: 1 Million Educated Children" },
   ];
 
+  // Impact Stats
   const impactStats = [
     { emoji: "🎓", number: "3,000", text: "School students reached." },
     { emoji: "👩‍🎓", number: "60", text: "University girl students benefited." },
@@ -82,51 +85,55 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Impact Section */}
-      <section className="max-w-6xl mx-auto mt-12 bg-white shadow-lg rounded-lg border border-gray-300 p-8 md:flex">
-        {/* Timeline */}
-        <div className="flex-[0.6] border-l-4 border-blue-600 pl-6 space-y-6 py-6">
-          <h3 className="text-3xl font-bold text-black-900 mb-6 text-center md:text-left">
-            Our Journey 
-          </h3>
+      {/* Journey Timeline - Two years side by side */}
+      <section className="max-w-6xl mx-auto mt-12 bg-white shadow-lg rounded-lg border border-gray-300 p-8">
+        <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Our Journey
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {milestones.map((milestone, index) => (
-            <div key={index} className="relative">
-              <div className="absolute -left-6 top-2 w-3 h-3 bg-blue-600 rounded-full border-4 border-white"></div>
-              <div className="bg-gray-100 shadow-md p-3 rounded-lg text-sm">
+            <div
+              key={index}
+              className="flex items-center space-x-4 bg-gray-100 p-4 rounded-lg shadow"
+            >
+              <div className="text-3xl">{milestone.title.split(" ")[0]}</div>
+              <div>
                 <span className="block text-lg font-semibold text-blue-900">
                   {milestone.year}
                 </span>
-                <p className="text-gray-700">{milestone.title}</p>
+                <p className="text-gray-700 text-sm">
+                  {milestone.title.slice(2)}
+                </p>
               </div>
             </div>
           ))}
         </div>
+      </section>
 
-        {/* Impact Stats */}
-        <div className="flex-1 p-6 md:p-10 space-y-6 border-l border-gray-300">
-          <h3 className="text-3xl font-bold text-black-900 mb-5 text-center md:text-left">
-            Impact 
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {impactStats.map((stat, index) => (
-              <div
-                key={index}
-                className="p-6 bg-white border border-gray-300 shadow-lg rounded-lg text-center transform hover:scale-105 transition-all duration-300"
-              >
-                <span className="block text-5xl">{stat.emoji}</span>
-                <span className="block text-3xl font-bold text-blue-900 mt-2">
-                  {stat.number}
-                </span>
-                <p className="text-gray-700 text-sm mt-2">{stat.text}</p>
-              </div>
-            ))}
-          </div>
+      {/* Impact Section - Centered & Wide */}
+      <section className="w-full max-w-5xl mx-auto mt-12 bg-white shadow-lg rounded-lg border border-gray-300 p-10">
+        <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Our Impact
+        </h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {impactStats.map((stat, index) => (
+            <div
+              key={index}
+              className="p-6 bg-white border border-gray-300 shadow-lg rounded-lg transform hover:scale-105 transition-all duration-300"
+            >
+              <span className="block text-5xl">{stat.emoji}</span>
+              <span className="block text-3xl font-bold text-blue-900 mt-2">
+                {stat.number}
+              </span>
+              <p className="text-gray-700 text-sm mt-2">{stat.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Partners Section */}
       <section className="max-w-6xl mx-auto mt-12 text-center">
-        <h3 className="text-3xl font-bold text-black-800 mb-6">Our Partners</h3>
+        <h3 className="text-3xl font-bold text-gray-800 mb-6">Our Partners</h3>
         <div className="flex flex-col md:flex-row justify-center items-center gap-10">
           {/* Training Partner */}
           <div className="bg-white shadow-lg p-6 rounded-lg border border-gray-300 w-64 flex flex-col items-center hover:shadow-xl transition-all duration-300">

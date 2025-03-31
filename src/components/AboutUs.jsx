@@ -5,6 +5,36 @@ const AboutUs = () => {
 
   return (
     <section id="about" className="py-16 bg-blue-50">
+      {/* Founders Section */}
+      <div className="text-center max-w-4xl mx-auto mb-12">
+        <h2 className="text-4xl font-extrabold text-blue-900">Founders</h2>
+        <div className="flex justify-center gap-12 mt-6">
+          {/* Founder 1 */}
+          <div className="text-center">
+            <img
+              src="/founder1.jpg" // Replace with actual image path
+              alt="Mr. Dwaraknath Naidu"
+              className="w-40 h-40 rounded-full mx-auto shadow-lg border border-black"
+            />
+            <p className="mt-3 text-lg font-semibold text-gray-800">
+              Mr. Dwaraknath Naidu
+            </p>
+          </div>
+
+          {/* Founder 2 */}
+          <div className="text-center">
+            <img
+              src="/founder2.jpg" // Replace with actual image path
+              alt="Mrs. Vijaya Tilkam"
+              className="w-40 h-40 rounded-full mx-auto shadow-lg border border-black"
+            />
+            <p className="mt-3 text-lg font-semibold text-gray-800">
+              Mrs. Vijaya Tilakam
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* About Us Heading */}
       <div className="text-center max-w-4xl mx-auto">
         <h2 className="text-4xl font-extrabold text-blue-900">About Us</h2>

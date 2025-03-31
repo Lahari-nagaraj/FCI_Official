@@ -1,4 +1,9 @@
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -51,11 +56,11 @@ const Footer = () => {
               <FaFacebookF className="text-white text-2xl hover:text-gray-400 transition" />
             </a>
             <a
-              href="https://twitter.com/yourpage"
+              href="https://www.linkedin.com/company/yourpage"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter className="text-white text-2xl hover:text-gray-400 transition" />
+              <FaLinkedinIn className="text-white text-2xl hover:text-gray-400 transition" />
             </a>
             <a
               href="https://www.instagram.com/fundachildinindia/"
