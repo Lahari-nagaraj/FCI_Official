@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import LandingPage from "./pages/LandingPage";
-import AboutUsPage from "./pages/AboutUsPage";
+import AboutUsPage from "./pages/AboutUspage"
 import Donate from "./components/Donate";
 import DonationPage from "./pages/DonationPage";
 import Education from "./pages/Education";
