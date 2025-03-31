@@ -7,8 +7,8 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8 px-12">
-      <div className="container mx-auto grid grid-cols-3 gap-8 items-center text-center md:text-left">
+    <footer className="bg-gray-800 text-white py-8 px-6">
+      <div className="container mx-auto flex flex-col md:grid md:grid-cols-3 gap-8 items-center text-center md:text-left">
         {/* Office Address - Left */}
         <div>
           <h2 className="text-lg font-semibold tracking-wide">
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Info - Center */}
-        <div className="text-center">
+        <div>
           <h2 className="text-lg font-semibold tracking-wide">Get in Touch</h2>
           <p className="text-gray-300 mt-2">
             Phone:{" "}
@@ -45,9 +45,9 @@ const Footer = () => {
         </div>
 
         {/* Social Media - Right */}
-        <div className="text-right">
+        <div className="flex flex-col items-center md:items-end">
           <h2 className="text-lg font-semibold tracking-wide">Follow Us</h2>
-          <div className="flex justify-end space-x-4 mt-3">
+          <div className="flex justify-center md:justify-end space-x-4 mt-3">
             <a
               href="https://www.facebook.com/groups/325405297611892/user/100004226688582"
               target="_blank"
