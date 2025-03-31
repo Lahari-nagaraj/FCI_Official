@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header"; // Ensure correct path for your Header component
-import Footer from "../components/Footer"; // Ensure correct path for your Footer component
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const AboutUsPage = () => {
   const navigate = useNavigate();
@@ -53,7 +53,6 @@ const AboutUsPage = () => {
 
   return (
     <div>
-      {/* Header */}
       <Header />
 
       <div className="bg-gradient-to-b from-gray-50 to-gray-200 min-h-screen px-6 py-12">
@@ -66,7 +65,7 @@ const AboutUsPage = () => {
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">
             Programs
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {programs.map((program) => (
               <div
                 key={program.id}
@@ -96,7 +95,7 @@ const AboutUsPage = () => {
           <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
             Our Journey
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {milestones.map((milestone, index) => (
               <div
                 key={index}
@@ -121,14 +120,14 @@ const AboutUsPage = () => {
           <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
             Our Impact
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {impactStats.map((stat, index) => (
               <div
                 key={index}
                 className="p-6 bg-white border border-gray-300 shadow-lg rounded-lg transform hover:scale-105 transition-all duration-300"
               >
                 <span className="block text-5xl">{stat.emoji}</span>
-                <span className="block text-3xl font-bold text-blue-900 mt-2">
+                <span className="block text-2xl sm:text-3xl font-bold text-blue-900 mt-2">
                   {stat.number}
                 </span>
                 <p className="text-gray-700 text-sm mt-2">{stat.text}</p>
@@ -142,25 +141,22 @@ const AboutUsPage = () => {
           <h3 className="text-3xl font-bold text-gray-800 mb-6">
             Our Partners
           </h3>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-            {/* Training Partner */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
             <div className="bg-white shadow-lg p-6 rounded-lg border border-gray-300 w-64 flex flex-col items-center hover:shadow-xl transition-all duration-300">
               <img
                 src="/training-partner-logo.png"
                 alt="Training Partner"
-                className="h-20 object-contain mb-4"
+                className="h-16 sm:h-20 object-contain mb-4"
               />
               <p className="text-blue-900 font-bold text-lg">
                 Training Partner
               </p>
             </div>
-
-            {/* Corporate Partner */}
             <div className="bg-white shadow-lg p-6 rounded-lg border border-gray-300 w-64 flex flex-col items-center hover:shadow-xl transition-all duration-300">
               <img
                 src="/corporate-partner-logo.png"
                 alt="Corporate Partner"
-                className="h-20 object-contain mb-4"
+                className="h-16 sm:h-20 object-contain mb-4"
               />
               <p className="text-blue-900 font-bold text-lg">
                 Corporate Partner
@@ -170,7 +166,6 @@ const AboutUsPage = () => {
         </section>
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
