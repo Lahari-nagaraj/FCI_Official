@@ -11,7 +11,6 @@ import LearningCenters from "./pages/LearningCenters";
 function App() {
   return (
     <Routes>
-      {/* Main Pages */}
       <Route path="/" element={<Home />} />
       <Route path="/landing" element={<LandingPage />} />
       <Route path="/about" element={<AboutUsPage />} />

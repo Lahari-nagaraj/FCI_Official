@@ -69,8 +69,7 @@ const AboutUsPage = () => {
             {programs.map((program) => (
               <div
                 key={program.id}
-                onClick={() => navigate(`/programs/${program.id}`)}
-                className="bg-white border border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-lg overflow-hidden transform hover:-translate-y-2 cursor-pointer"
+                className="bg-white border border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-lg overflow-hidden"
               >
                 <img
                   src={program.image}
@@ -84,6 +83,12 @@ const AboutUsPage = () => {
                   <p className="text-gray-700 text-sm mt-2">
                     {program.description}
                   </p>
+                  <button
+                    onClick={() => navigate(`/programs/${program.id}`)}
+                    className="mt-4 px-4 py-2 bg-blue-900 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
+                  >
+                    Learn More
+                  </button>
                 </div>
               </div>
             ))}
