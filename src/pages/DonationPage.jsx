@@ -25,6 +25,22 @@ const DonationPage = () => {
           />
         </div>
 
+        {/* Bank Details */}
+        <div className="mt-6 text-left text-sm text-gray-700 bg-gray-100 p-4 rounded-md shadow-sm">
+          <p>
+            <span className="font-semibold">Bank Name:</span> State Bank Of India
+          </p>
+          <p>
+            <span className="font-semibold">Account Number:</span> 40145588849
+          </p>
+          <p>
+            <span className="font-semibold">IFSC Code:</span> SBIN0060133
+          </p>
+          <p className="mt-2 text-green-700 font-medium">
+            All donations are tax exempted under 80G
+          </p>
+        </div>
+
         <div className="mt-6 space-x-4 flex justify-center">
           <a
             href="https://www.facebook.com/groups/325405297611892/user/100004226688582"
