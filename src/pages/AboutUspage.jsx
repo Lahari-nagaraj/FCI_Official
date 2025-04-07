@@ -120,6 +120,38 @@ const AboutUsPage = () => {
           </div>
         </section>
 
+        {/* Founders Section */}
+        <section className="w-full max-w-5xl mx-auto mt-12 bg-white shadow-lg rounded-lg border border-gray-300 p-10">
+          <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            Our Founders
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-6 bg-gray-50 border border-gray-300 rounded-lg shadow hover:shadow-md transition-all duration-300">
+              <h4 className="text-2xl font-semibold text-blue-900 mb-2">
+                Mr. J K Dwaraknath Naidu
+              </h4>
+              <p className="text-gray-700 text-sm">
+                Mr. Naidu is a visionary leader and one of the founding members
+                of FCI. He has always believed in the transformative power of
+                education and community support. His relentless efforts have
+                been instrumental in shaping the core values of the
+                organization.
+              </p>
+            </div>
+            <div className="p-6 bg-gray-50 border border-gray-300 rounded-lg shadow hover:shadow-md transition-all duration-300">
+              <h4 className="text-2xl font-semibold text-blue-900 mb-2">
+                Mrs. Vijaya Thilakam
+              </h4>
+              <p className="text-gray-700 text-sm">
+                A passionate educator and humanitarian, Mrs. Thilakam co-founded
+                FCI with the goal of nurturing young minds and supporting
+                underprivileged communities. Her dedication continues to inspire
+                all those involved with FCI’s mission.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Impact Section */}
         <section className="w-full max-w-5xl mx-auto mt-12 bg-white shadow-lg rounded-lg border border-gray-300 p-10">
           <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
